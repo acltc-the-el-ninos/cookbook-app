@@ -18,5 +18,6 @@ class RecipesController < ApplicationController
       ingredients: params[:input_ingredients],
       directions: params[:input_directions]
     )
+    redirect_to '/recipes'
   end
 end

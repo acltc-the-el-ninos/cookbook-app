@@ -1,5 +1,5 @@
 <h1>Create a recipe:</h1>
-<%= form_tag'/recipes', method: :post do %>
+<%= form_tag '/recipes', method: :post do %>
   <div class="form-group">
     <%= label_tag :input_title %>
     <%= text_field_tag(:input_title, nil, {class: "form-control", placeholder: "Enter the title here!"})%>
