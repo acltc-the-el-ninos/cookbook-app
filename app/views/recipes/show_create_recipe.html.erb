@@ -1,22 +1,22 @@
 <h1>Create a recipe:</h1>
-<%= form_tag '/show_create_recipe_result', method: :post do %>
-  <div>
+<%= form_tag'/show_create_recipe_result', method: :post do %>
+  <div class="form-group">
     <%= label_tag :input_title %>
-    <%= text_field_tag :input_title %>
+    <%= text_field_tag(:input_title, nil, {class: "form-control", placeholder: "Enter the title here!"})%>
   </div>
-  <div>
+  <div class="form-group">
     <%= label_tag :input_chef %>
-    <%= text_field_tag :input_chef %>
+    <%= text_field_tag :input_chef, nil, class: "form-control", placeholder: "Enter the chef's name here!" %>
   </div>
-  <div>
+  <div class="form-group">
     <%= label_tag :input_ingredients %>
-    <%= text_field_tag :input_ingredients %>
+    <%= text_field_tag :input_ingredients, nil, class: "form-control" %>
   </div>
-  <div>
+  <div class="form-group">
     <%= label_tag :input_directions %>
-    <%= text_field_tag :input_directions %>
+    <%= text_field_tag :input_directions, nil, class: "form-control" %>
   </div>
   <div>
-    <%= submit_tag 'Send' %>
+    <%= button_tag 'Send', class: "btn btn-default" %>
   </div>
 <% end %>
