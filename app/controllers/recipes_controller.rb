@@ -3,7 +3,7 @@ class RecipesController < ApplicationController
     @recipe = Recipe.last
   end
 
-  def all
+  def index
     @recipes = Recipe.all
   end
 

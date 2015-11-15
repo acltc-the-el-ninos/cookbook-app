@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get '/' => 'recipes#home'
-  get '/all' => 'recipes#all'
+  get '/recipes' => 'recipes#index'
 
   get '/show_create_recipe' => 'recipes#show_create_recipe'
   post '/show_create_recipe_result' => 'recipes#show_create_recipe_result'
