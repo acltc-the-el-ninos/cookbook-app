@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  get '/show_create_recipe' => 'recipes#show_create_recipe'
-  post '/show_create_recipe_result' => 'recipes#show_create_recipe_result'
-
   get '/recipes' => 'recipes#index'
+  get '/recipes/new' => 'recipes#new'
+  post '/recipes' => 'recipes#create'
   get '/recipes/:id' => 'recipes#show'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

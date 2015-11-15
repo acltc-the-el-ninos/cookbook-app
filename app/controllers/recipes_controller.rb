@@ -8,14 +8,10 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find_by(id: recipe_id)
   end
 
-
-
-
-
-  def show_create_recipe
+  def new
   end
 
-  def show_create_recipe_result
+  def create
     @recipe = Recipe.create(
       title: params[:input_title],
       chef: params[:input_chef],
