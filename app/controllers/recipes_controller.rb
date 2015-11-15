@@ -1,10 +1,15 @@
 class RecipesController < ApplicationController
-  def home
-    @recipe = Recipe.last
-  end
-
   def index
     @recipes = Recipe.all
+  end
+
+  def show
+    recipe_id = params[:id]
+    @recipe = Recipe.find_by(id: recipe_id)
+  end
+
+  def home
+    @recipe = Recipe.last
   end
 
   def show_create_recipe
