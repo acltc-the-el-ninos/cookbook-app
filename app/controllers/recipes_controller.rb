@@ -12,11 +12,6 @@ class RecipesController < ApplicationController
 
 
 
-
-  def home
-    @recipe = Recipe.last
-  end
-
   def show_create_recipe
   end
 
