@@ -8,6 +8,11 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find_by(id: recipe_id)
   end
 
+
+
+
+
+
   def home
     @recipe = Recipe.last
   end
