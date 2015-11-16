@@ -3,4 +3,5 @@
 <h3>Created by: <%= @recipe.chef %></h3>
 <p>Ingredients: <%= @recipe.ingredients %></p>
 <p>Directions: <%= @recipe.directions %></p>
+<%= link_to "Edit this recipe", "/recipes/#{@recipe.id}/edit" %>
 <%= link_to "Back to all recipes", "/recipes" %>

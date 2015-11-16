@@ -20,4 +20,19 @@ class RecipesController < ApplicationController
     )
     redirect_to '/recipes'
   end
+
+  def edit
+    @recipe = Recipe.find_by(id: params[:id])
+  end
+
+  def update
+    @recipe = Recipe.find_by(id: params[:id])
+    @recipe.update(
+      title: params[:input_title],
+      chef: params[:input_chef],
+      ingredients: params[:input_ingredients],
+      directions: params[:input_directions]
+    )
+    redirect_to "/recipes/#{@recipe.id}"
+  end
 end
