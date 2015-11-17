@@ -12,7 +12,7 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.create(
+    recipe = Recipe.create(
       title: params[:input_title],
       chef: params[:input_chef],
       ingredients: params[:input_ingredients],
@@ -26,19 +26,19 @@ class RecipesController < ApplicationController
   end
 
   def update
-    @recipe = Recipe.find_by(id: params[:id])
-    @recipe.update(
+    recipe = Recipe.find_by(id: params[:id])
+    recipe.update(
       title: params[:input_title],
       chef: params[:input_chef],
       ingredients: params[:input_ingredients],
       directions: params[:input_directions]
     )
-    redirect_to "/recipes/#{@recipe.id}"
+    redirect_to "/recipes/#{recipe.id}"
   end
 
   def destroy
-    @recipe = Recipe.find_by(id: params[:id])
-    @recipe.destroy
+    recipe = Recipe.find_by(id: params[:id])
+    recipe.destroy
     redirect_to '/recipes'
   end
 end
