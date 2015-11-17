@@ -35,4 +35,8 @@ class RecipesController < ApplicationController
     )
     redirect_to "/recipes/#{@recipe.id}"
   end
+
+  def destroy
+    
+  end
 end

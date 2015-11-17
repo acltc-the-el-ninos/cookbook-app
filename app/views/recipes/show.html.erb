@@ -4,4 +4,5 @@
 <p>Ingredients: <%= @recipe.ingredients %></p>
 <p>Directions: <%= @recipe.directions %></p>
 <%= link_to "Edit this recipe", "/recipes/#{@recipe.id}/edit" %>
+<%= link_to "Delete this recipe", "/recipes/#{@recipe.id}", method: :delete %>
 <%= link_to "Back to all recipes", "/recipes" %>
