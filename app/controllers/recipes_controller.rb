@@ -16,7 +16,8 @@ class RecipesController < ApplicationController
       title: params[:input_title],
       chef: params[:input_chef],
       ingredients: params[:input_ingredients],
-      directions: params[:input_directions]
+      directions: params[:input_directions],
+      image: params[:input_image]
     )
     redirect_to '/recipes'
   end
@@ -31,7 +32,8 @@ class RecipesController < ApplicationController
       title: params[:input_title],
       chef: params[:input_chef],
       ingredients: params[:input_ingredients],
-      directions: params[:input_directions]
+      directions: params[:input_directions],
+      image: params[:input_image]
     )
     redirect_to "/recipes/#{recipe.id}"
   end

@@ -16,6 +16,10 @@
     <%= label_tag :input_directions %>
     <%= text_field_tag :input_directions, @recipe.directions, class: "form-control" %>
   </div>
+  <div class="form-group">
+    <%= label_tag :input_image %>
+    <%= text_field_tag :input_image, @recipe.image, class: "form-control" %>
+  </div>
   <div>
     <%= button_tag 'Send', class: "btn btn-default" %>
   </div>
