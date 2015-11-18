@@ -19,6 +19,8 @@ class RecipesController < ApplicationController
       directions: params[:input_directions],
       image: params[:input_image]
     )
+    flash[:success] = "Recipe was successfully created!"
+    flash[:info] = "This is a random message!"
     redirect_to '/recipes'
   end
 
@@ -35,12 +37,14 @@ class RecipesController < ApplicationController
       directions: params[:input_directions],
       image: params[:input_image]
     )
+    flash[:success] = "Recipe was successfully updated!"
     redirect_to "/recipes/#{recipe.id}"
   end
 
   def destroy
     recipe = Recipe.find_by(id: params[:id])
     recipe.destroy
+    flash[:success] = "Recipe was successfully deleted!"
     redirect_to '/recipes'
   end
 end
