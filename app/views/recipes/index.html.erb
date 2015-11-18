@@ -7,8 +7,19 @@
       <div class="well">
         <h2><%= link_to recipe.title, "/recipes/#{recipe.id}" %></h2>
         <h3>Chef: <%= recipe.chef %></h3>
-        <p>Ingredients: <%= recipe.ingredients %></p>
-        <p>Directions: <%= recipe.directions %></p>
+        <p>Created on: <%= recipe.readable_created_at %></p>
+        <h4>Ingredients</h4>
+        <ul>
+          <% recipe.ingredients_list.each do |ingredient| %>
+            <li><%= ingredient %></li>
+          <% end %>
+        </ul>
+        <h4>Directions</h4>
+        <ol>
+          <% recipe.directions_list.each do |direction| %>
+            <li><%= direction %></li>
+          <% end %>
+        </ol>
         <p>Title in caps: <%= recipe.title_in_caps %></p>
         <p>Recipe id: <%= recipe.id %></p>
         <img src="<%= recipe.image %>" alt="">
