@@ -48,7 +48,7 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: cookbook-app_production
-  username: cookbook-app
-  password: <%= ENV['COOKBOOK-APP_DATABASE_PASSWORD'] %>
+  database: cookbook-app-production
+  adapter: postgresql
+  encoding: unicode
+  pool: 5

@@ -2,8 +2,8 @@ class RecipesController < ApplicationController
   def index
     @recipes = Recipe.all
 
-    sort_attribute = params[:sort]
-    sort_order = params[:sort_order]
+    sort_attribute = params[:input_sort]
+    sort_order = params[:input_sort_order]
     if sort_attribute && sort_order
       @recipes = Recipe.order(sort_attribute => sort_order)
       # @recipes = Recipe.order(:prep_time => :desc)
